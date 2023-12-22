@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta: O Palmeiras tem mundial?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color:#03bb85;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Adiciona flex-direction: row para colocar os botões lado a lado */
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 20px; /* Torna os botões redondos */
+            margin: 5px; /* Adiciona um pequeno espaçamento entre os botões */
+            cursor: pointer;
+            background-color: navy;
+            color: #E0FFFF;
+            width: 105px
+        }
+
+        /* Estilo adicional para o botão "Não" */
+        a button {
+            text-decoration: none; /* Remove o sublinhado do link */
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>O Palmeiras tem mundial?</h1>
+    
+    <!-- Adiciona uma div para envolver os botões -->
+    <div class="buttons-container">
+        <button onclick="respostaSim()">Sim</button>
+        <a href="About.html"><button>Não</button></a>
+    </div>
+
+    <audio id="audioMundial" style="display:none">
+        <source src="Audio.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        function respostaSim() {
+            document.getElementById('audioMundial').style.display = 'block';
+            document.getElementById('audioMundial').play();
+        }
+    </script>
+</body>
+</html>
